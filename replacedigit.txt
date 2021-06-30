@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+int replaceDigit(int n,int x,int y)
+{
+    int result=0,multiply=1;
+    while(n/10>0)
+    {
+        int remainder=n%10;
+        if (remainder==x)
+        result = result + y * multiply;
+        else // else remain as such
+        result = result + remainder*
+        multiply;
+        multiply*=10;
+        n=n/10; //update the value
+    }
+    if(n==x)
+    result = result +y *  multiply;
+    else // else remain as such
+    result = result + result + n *multiply;
+    return result;
+}
+int main()
+{
+    int n,x,y;
+    cin>>n;
+    cin>>x;
+    cin>>y;
+    cout << replaceDigit(n, x, y) << endl;
+    return 0;
+}
+
+//Output:
+//16719
+//1
+//8
+//86789
