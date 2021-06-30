@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/30-6-2021-program3
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int p;
+		int sum=0,r=0;
+		Scanner x=new Scanner(System.in);
+		p=x.nextInt();
+		 int pro=1;
+		 while((p>0) && (p<=100000))
+		 {
+		     r=p%10;
+		     sum=sum+r;
+		     pro=pro*r;
+		     p/=10;
+		 }
+		 int z=pro-sum;
+		System.out.println(""+z);
+		
+	}
+}
+
+//Output:
+//8842
+//490
