@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int n,k;
+	    Scanner p=new Scanner(System.in);
+	    n=p.nextInt();
+	    if(0<=n)
+	    {
+	        if(n<=1000)
+	        {
+	           k=(n%4==0)?++n:--n;
+	            System.out.println(k); 
+	        }
+	    }
+	}
+}
+
+//output:
+//2
+//1
