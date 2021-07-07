@@ -1,0 +1,39 @@
+import java.util.*;
+class Runningsum
+{
+	public static void main(String args[])
+	{
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int a[]=new int[n];
+	for(int i=0;i<n;i++)
+	a[i]=sc.nextInt();
+	int sum=0;
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<=i;j++)
+		{
+		sum+=a[j];
+		}
+	} 
+	System.out.println(sum);
+	}
+}
+
+//output1
+C:\noori>javac Runningsum.java
+
+C:\noori>java Runningsum
+5
+
+1 2 3 4 5 
+
+35
+
+//output2
+C:\noori>java Runningsum
+3
+
+1 10 5
+
+28
